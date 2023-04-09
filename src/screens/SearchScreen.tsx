@@ -3,8 +3,10 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function SearchScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>SearchScreen</Text>
+    <View style={styles.container} testID="SearchScreen">
+      <Text style={styles.text} testID="SearchScreenTitle">
+        SearchScreen
+      </Text>
     </View>
   );
 }
