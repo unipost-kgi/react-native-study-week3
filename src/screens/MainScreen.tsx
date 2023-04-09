@@ -5,10 +5,10 @@ import React from 'react';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import HomeScreen from '../components/HomeScreen';
-import MessageScreen from '../components/MessageScreen';
-import NotificationScreen from '../components/NotificationScreen';
-import SearchScreen from '../components/SearchScreen';
+import HomeScreen from './HomeScreen';
+import MessageScreen from './MessageScreen';
+import NotificationScreen from './NotificationScreen';
+import SearchScreen from './SearchScreen';
 
 const BottomTab = createMaterialBottomTabNavigator();
 
@@ -24,6 +24,7 @@ export default function MainScreen() {
             tabBarIcon: ({ color }) => <Icon name="home" color={color} size={24} />,
             tabBarColor: 'blue',
             tabBarBadge: 'new',
+            tabBarTestID: 'HomeTab',
           }}
         />
         <BottomTab.Screen
@@ -33,6 +34,7 @@ export default function MainScreen() {
             tabBarLabel: '검색',
             tabBarIcon: ({ color }) => <Icon name="search" color={color} size={24} />,
             tabBarColor: 'green',
+            tabBarTestID: 'SearchTab',
           }}
         />
         <BottomTab.Screen
@@ -43,6 +45,7 @@ export default function MainScreen() {
             tabBarIcon: ({ color }) => <Icon name="notifications" color={color} size={24} />,
             tabBarColor: 'black',
             tabBarBadge: '50',
+            tabBarTestID: 'NotificationTab',
           }}
         />
         <BottomTab.Screen
@@ -53,6 +56,7 @@ export default function MainScreen() {
             tabBarIcon: ({ color }) => <Icon name="message" color={color} size={24} />,
             tabBarColor: 'gray',
             tabBarBadge: true,
+            tabBarTestID: 'MessageTab',
           }}
         />
       </BottomTab.Navigator>
